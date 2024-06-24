@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "212786131089",
+    "project_id": "minipong-a282e",
+    "storage_bucket": "minipong-a282e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212786131089:android:561f30aa5e38120f0e8f30",
+        "android_client_info": {
+          "package_name": "com.nevertopia.minipong"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfLT6IsAIENDvFjOpEmEKU91TNQpYX5_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
