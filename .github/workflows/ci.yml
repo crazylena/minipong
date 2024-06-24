@@ -1,4 +1,4 @@
-#from https://game.ci/docs/github/builder
+#https://game.ci/docs/github/getting-started
 name: Build project
 
 on: [push, pull_request]
@@ -17,7 +17,7 @@ jobs:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - iOS # Build an iOS player.
           - Android # Build an Android .apk standalone app.
-          - WebGL # WebGL.
+          # - WebGL # WebGL.
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,8 +37,14 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
+          # Set this flag to androidPackage to build an apk, androidAppBundle for an aab, or androidStudioProject to build an Android Studio Project.
+          androidExportType: 'androidPackage' # https://game.ci/docs/github/builder/#androidkeystorebase64
+          androidKeystoreName: user.keystore
+          androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
+          androidKeyaliasPass: ${{ secrets.ANDROID_KEYALIAS_PASS }}
       - uses: actions/upload-artifact@v3
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
-
