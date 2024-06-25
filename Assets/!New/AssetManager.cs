@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using Google.Play.AssetDelivery;
+//using Google.Play.AssetDelivery;
 
 public class AssetManager : MonoBehaviour
 {
