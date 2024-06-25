@@ -1,24 +1,27 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
 [RequireComponent(typeof(VideoPlayer))]
 public class BackgroundVideo : MonoBehaviour
 {
-    private VideoClip[] _videoClips;
     private VideoPlayer _videoPlayer;
 
     private void Start()
     {
-        _videoClips = Resources.LoadAll<VideoClip>("Videos");
+        StartCoroutine(WaitAndPlayVideo());
+    }
 
+    private IEnumerator WaitAndPlayVideo()
+    {
+        yield return new WaitUntil(() => AssetManager.Instance.isLoadingFinished);
         _videoPlayer = GetComponent<VideoPlayer>();
-
-        _videoPlayer.clip = PickRandomVideoClip();
+        _videoPlayer.clip = AssetManager.Instance.GetVideo(PickRandomVideoClipIndex());
         _videoPlayer.Play();
     }
 
-    private VideoClip PickRandomVideoClip()
+    private int PickRandomVideoClipIndex()
     {
-        return _videoClips[Random.Range(0, _videoClips.Length)];
+        return Random.Range(0, AssetManager.Instance.loadableAssets.Length);
     }
 }
