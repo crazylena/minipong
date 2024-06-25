@@ -11,7 +11,6 @@ using Google.Play.AssetDelivery;
 
 public class AssetManager : MonoBehaviour
 {
-    // public DeliveryType dt;
     public static AssetManager Instance { get; private set; }
 
     [SerializeReference] public AssetReference[] loadableAssets;
