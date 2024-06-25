@@ -38,7 +38,7 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           # Set this flag to androidPackage to build an apk, androidAppBundle for an aab, or androidStudioProject to build an Android Studio Project.
-          androidExportType: 'androidPackage' # https://game.ci/docs/github/builder/#androidkeystorebase64
+          androidExportType: 'androidAppBundle' # https://game.ci/docs/github/builder/#androidkeystorebase64
           androidKeystoreName: user.keystore
           androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
