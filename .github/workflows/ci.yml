@@ -7,7 +7,7 @@ jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
     # https://game.ci/docs/3/github/getting-started
-    runs-on: macos-latest # ubuntu-latest # windows-2019
+    runs-on: ubuntu-latest# macos-latest #  # windows-2019
     strategy:
       fail-fast: false
       matrix:
@@ -16,7 +16,7 @@ jobs:
           # - StandaloneWindows # Build a Windows standalone.
           # - StandaloneWindows64 # Build a Windows 64-bit standalone.
           # - StandaloneLinux64 # Build a Linux 64-bit standalone.
-          - iOS # Build an iOS player.
+          # - iOS # Build an iOS player.
           - Android # Build an Android .apk standalone app.
           # - WebGL # WebGL.
     steps:

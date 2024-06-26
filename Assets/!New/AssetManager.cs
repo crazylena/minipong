@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.Video;
 #if UNITY_ANDROID
 using Google.Play.AssetDelivery;
 #endif
-
 
 //https://developer.android.com/guide/playcore/asset-delivery/integrate-unity
 
@@ -14,7 +14,7 @@ public class AssetManager : MonoBehaviour
 {
     public static AssetManager Instance { get; private set; }
 
-    [SerializeReference] public AssetReference[] loadableAssets;
+    public AssetReference[] loadableAssets;
     public string[] loadableAssetNames;
     public List<VideoClip> _videoClips = new();
     public bool isLoadingFinished;
@@ -28,7 +28,7 @@ public class AssetManager : MonoBehaviour
 
     private IEnumerator LoadAll()
     {
-#if UNITY_ANDROID // && !UNITY_EDITOR
+#if !UNITY_ANDROID // && !UNITY_EDITOR
         for (var i = 0; i < loadableAssetNames.Length; i++)
         {
             var assetPackRequest = PlayAssetDelivery.RetrieveAssetBundleAsync(loadableAssetNames[i]);
@@ -46,6 +46,7 @@ public class AssetManager : MonoBehaviour
         for (int i = 0; i < loadableAssets.Length; i++)
         {
             AsyncOperationHandle<VideoClip> handle = loadableAssets[i].LoadAssetAsync<VideoClip>();
+           // AsyncOperationHandle<VideoClip> handle = loadableAssets[i].LoadAssetAsync<VideoClip>();
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
