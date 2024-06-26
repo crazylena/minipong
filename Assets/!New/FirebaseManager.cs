@@ -84,4 +84,9 @@ public class FirebaseManager : MonoBehaviour
         };
         FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelEnd, levelEndParameters);
     }
+
+    public void SetLevel(int useLevel)
+    {
+        Crashlytics.SetCustomKey("user_level",useLevel.ToString());
+    }
 }
