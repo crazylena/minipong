@@ -61,7 +61,8 @@ public class FirebaseManager : MonoBehaviour
     public void SendGameStart()
     {
         Debug.LogError("SendGameStart");
-        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventAppOpen);
+        FirebaseAnalytics.LogEvent("game_start");
+        //FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventAppOpen);
     }
 
     public void SendLevelStart(int useLevel)
