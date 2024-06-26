@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: e1fcd233a34b1413085057401be8acfe
   m_SerializeEntries:
-  - m_GUID: cce262816357d40bc83b77123cf02757
-    m_Address: Assets/Videos/vid3.mp4
+  - m_GUID: caa3603d1c0aa49509c263182db6d574
+    m_Address: Assets/VideoOgv/vid3.ogv
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

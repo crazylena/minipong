@@ -46,7 +46,6 @@ public class AssetManager : MonoBehaviour
         for (int i = 0; i < loadableAssets.Length; i++)
         {
             AsyncOperationHandle<VideoClip> handle = loadableAssets[i].LoadAssetAsync<VideoClip>();
-           // AsyncOperationHandle<VideoClip> handle = loadableAssets[i].LoadAssetAsync<VideoClip>();
             yield return handle;
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
