@@ -403,14 +403,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadableAssets:
   - rid: -2
-  - rid: -2
   loadableAssetNames:
-  - video_1
-  - video_2
-  - video_3
-  - video_4
-  - video_5
-  - video_6
+  - vid1
+  - vid2
+  - vid3
+  - vid4
+  - vid5
+  - vid6
   _videoClips: []
   isLoadingFinished: 0
   references:

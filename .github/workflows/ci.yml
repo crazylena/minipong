@@ -6,7 +6,8 @@ on: [push, pull_request]
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: ubuntu-latest
+    # https://game.ci/docs/3/github/getting-started
+    runs-on: macos-latest # ubuntu-latest # windows-2019
     strategy:
       fail-fast: false
       matrix:
