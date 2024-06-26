@@ -16,7 +16,31 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 77a1a2e6184334bcd8d8c345f6be2aa4
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: a52b00a8afc674da3bac054e11f0e307
+    m_Address: Assets/VideoOgv/vid1.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc04f688367cb49e9a16cec28dc76747
+    m_Address: Assets/VideoOgv/vid2.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: caa3603d1c0aa49509c263182db6d574
+    m_Address: Assets/VideoOgv/vid3.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4f828c546373e45e4b6e9c9944a506ff
+    m_Address: Assets/VideoOgv/vid4.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a09f3931b11244f678339c61b62b59b2
+    m_Address: Assets/VideoOgv/vid5.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5febde6caeae74c47a5f878af7ce12fa
+    m_Address: Assets/VideoOgv/vid6.ogv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 52545bd1174144ba99428db6b4c20859, type: 2}
   m_SchemaSet:
